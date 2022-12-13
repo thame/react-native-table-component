@@ -3,11 +3,6 @@ import PropTypes from 'prop-types';
 import { View } from 'react-native';
 
 export class Table extends Component {
-  static propTypes = {
-    style: PropTypes.object,
-    borderStyle: PropTypes.object
-  };
-
   _renderChildren(props) {
     return React.Children.map(props.children, child =>
       React.cloneElement(
@@ -41,10 +36,6 @@ export class Table extends Component {
 }
 
 export class TableWrapper extends Component {
-  static propTypes = {
-    style: PropTypes.object
-  };
-
   _renderChildren(props) {
     return React.Children.map(props.children, child =>
       React.cloneElement(child, props.borderStyle ? { borderStyle: props.borderStyle } : {})

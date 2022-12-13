@@ -5,11 +5,6 @@ import { Cell } from './cell';
 import { sum } from '../utils';
 
 export class Row extends Component {
-  static propTypes = {
-    style: PropTypes.object,
-    textStyle: PropTypes.object
-  };
-
   render() {
     const { data, style, widthArr, height, flexArr, textStyle, cellTextStyle, ...props } = this.props;
     let width = widthArr ? sum(widthArr) : 0;
@@ -37,11 +32,6 @@ export class Row extends Component {
 }
 
 export class Rows extends Component {
-  static propTypes = {
-    style: PropTypes.object,
-    textStyle: PropTypes.object
-  };
-
   render() {
     const { data, style, widthArr, heightArr, flexArr, textStyle, ...props } = this.props;
     const flex = flexArr ? sum(flexArr) : 0;

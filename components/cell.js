@@ -3,12 +3,6 @@ import PropTypes from 'prop-types';
 import { View, Text, StyleSheet } from 'react-native';
 
 export class Cell extends Component {
-  static propTypes = {
-    style: PropTypes.object,
-    textStyle: PropTypes.object,
-    borderStyle: PropTypes.object
-  };
-
   render() {
     const { data, width, height, flex, style, textStyle, borderStyle, ...props } = this.props;
     const textDom = React.isValidElement(data) ? (
